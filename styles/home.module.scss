@@ -1,6 +1,5 @@
 .video {
     width: 100vw;
-    height: 100vh;
     position: relative;
     video {
         filter: brightness(0.5);
@@ -9,7 +8,7 @@
 
 .video__text {
     position: absolute;
-    top: 0;
+    top: -100px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -18,4 +17,48 @@
     align-items: center;
     color: white;
     font-size: 2rem;
+}
+
+.item {
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+    min-height: 100vh;
+
+    &__cards {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        &__card {
+            width: 350px;
+            height: 550px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            font-family: "Julius Sans One", sans-serif;
+            cursor: pointer;
+            .img {
+                position: relative;
+                height: 75%;
+                width: 70%;
+                img {
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
 }

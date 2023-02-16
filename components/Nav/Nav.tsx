@@ -20,10 +20,19 @@ export default function Nav() {
             </div>
             <div className={styles.nav__search}>
                 <TextField
-                    id="search"
                     label="Rechercher"
                     variant="standard"
-                    color="secondary"
+                    InputLabelProps={{
+                        style: {
+                            color: "white",
+                        },
+                    }}
+                    InputProps={{
+                        style: {
+                            color: "white",
+                            borderColor: "white",
+                        },
+                    }}
                 />
             </div>
         </nav>
