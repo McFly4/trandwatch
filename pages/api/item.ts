@@ -1,5 +1,4 @@
 import { Items } from "../../types";
-
 const items: Items = [
     {
         id: "1",
@@ -86,7 +85,7 @@ const items: Items = [
         id: "11",
         brand: "Tag Heuer",
         name: "Carrera",
-        price: "35 000€",
+        price: "4 000€",
         subname: "L'explorateur des profondeurs",
         image: "/tagheuer/carrera.png",
     },

@@ -1,39 +1,21 @@
 .nav {
     height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     z-index: 5;
     width: 100%;
+    font-family: "Julius Sans One", sans-serif;
 
-    &__logo {
-        max-width: 33%;
-        min-width: 33%;
+    &__container {
         display: flex;
-        justify-content: center;
-    }
-
-    &__menu {
-        max-width: 33%;
-        min-width: 33%;
-        display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: space-around;
-        font-family: "Julius Sans One", sans-serif;
-        font-size: 1.5rem;
+        width: 90%;
+        margin: auto;
         p {
             font-weight: bold;
             color: #fff;
             letter-spacing: 2px;
             cursor: pointer;
         }
-    }
-
-    &__search {
-        max-width: 33%;
-        min-width: 33%;
-        display: flex;
-        justify-content: center;
     }
 }

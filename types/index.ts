@@ -8,3 +8,10 @@ export type Item = {
 };
 
 export type Items = Item[];
+
+export type Brand = {
+    id?: string;
+    name?: string;
+};
+
+export type Brands = Brand[];
