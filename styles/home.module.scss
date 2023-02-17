@@ -24,11 +24,19 @@
     width: 100%;
     min-height: 100vh;
 
+    &__filtered {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 50px auto;
+    }
+
     &__cards {
         width: 80%;
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 0fr);
         grid-template-rows: repeat(3, 1fr);
         flex-wrap: wrap;
         justify-content: space-between;

@@ -57,32 +57,34 @@ const Home = () => {
                             renderOption={(props, option, { selected }) => (
                                 <li {...props}>{option.name}</li>
                             )}
-                            style={{ width: 500 }}
+                            style={{ width: 350 }}
                             renderInput={(params) => (
                                 <TextField
                                     {...params}
-                                    label="Checkboxes"
+                                    label="Rechercher"
                                     placeholder="Favorites"
                                 />
                             )}
                         />
                     </div>
-                    <TextField
-                        label="Rechercher"
-                        variant="standard"
-                        onChange={handleSearch}
-                        InputLabelProps={{
-                            style: {
-                                color: "white",
-                            },
-                        }}
-                        InputProps={{
-                            style: {
-                                color: "white",
-                                borderColor: "white",
-                            },
-                        }}
-                    />
+                    <div className={styles.item__filtered__search}>
+                        <TextField
+                            label="Rechercher"
+                            variant="standard"
+                            onChange={handleSearch}
+                            InputLabelProps={{
+                                style: {
+                                    color: "white",
+                                },
+                            }}
+                            InputProps={{
+                                style: {
+                                    color: "white",
+                                    borderColor: "white",
+                                },
+                            }}
+                        />
+                    </div>
                 </div>
                 <div className={styles.item__cards}>
                     {filteredItems.map((item) => (
