@@ -2,27 +2,19 @@ import styles from "../styles/home.module.scss";
 import data from "./api/item";
 import data2 from "./api/brand";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
-import Checkbox from "@mui/material/Checkbox";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
-
-const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
-const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
 const Home = () => {
+    const router = useRouter();
     const items = data;
     const brands = data2;
     const [search, setSearch] = useState("");
     const [brand, setBrand] = useState("");
     const handleSearch = (e: any) => {
         setSearch(e.target.value);
-    };
-
-    const handleFilters = (e: any) => {
-        setBrand(e.target.value);
     };
 
     const filteredItems = items.filter((item: any) => {
@@ -88,7 +80,11 @@ const Home = () => {
                 </div>
                 <div className={styles.item__cards}>
                     {filteredItems.map((item) => (
-                        <div key={item.id} className={styles.item__cards__card}>
+                        <div
+                            key={item.id}
+                            className={styles.item__cards__card}
+                            onClick={() => router.push(`/Watch/${item.id}`)}
+                        >
                             <div className={styles.img}>
                                 <Image
                                     src={`${item.image}`}
