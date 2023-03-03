@@ -5,6 +5,11 @@ export type Item = {
     subname?: string;
     image?: string;
     brand?: string;
+    video?: string;
+    desc1?: string;
+    cname?: string;
+    cphone?: string;
+    cemail?: string;
 };
 
 export type Items = Item[];

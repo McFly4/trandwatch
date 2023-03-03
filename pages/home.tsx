@@ -26,7 +26,7 @@ const Home = () => {
     return (
         <>
             <div className={styles.video}>
-                <video className="fullscreen-video" muted autoPlay loop>
+                <video muted autoPlay loop>
                     <source src="/rolex.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>

@@ -7,6 +7,11 @@ const items: Items = [
         price: "45 000€",
         subname: "L'accomplissement d'un idéal",
         image: "/rolex/daydate.png",
+        video: "/rolex/video/daydate.mp4",
+        desc1: "",
+        cname: "Jean",
+        cphone: "06 00 00 00 00",
+        cemail: "jean.gmail.com",
     },
     {
         id: "2",
