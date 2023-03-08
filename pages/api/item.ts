@@ -124,6 +124,9 @@ const items: Items = [
         price: "4 000€",
         subname: "L'explorateur des profondeurs",
         image: "/tagheuer/carrera.png",
+        cname: "Xander Barker",
+        cphone: "05 84 02 65 55",
+        cemail: "malesuada.malesuada@outlook.com",
     },
     {
         id: "12",
@@ -132,6 +135,9 @@ const items: Items = [
         price: "35 000€",
         subname: "L'explorateur des profondeurs",
         image: "/tagheuer/monaco.jpg",
+        cname: "Tatiana Sandoval",
+        cphone: "04 14 74 95 01",
+        cemail: "vitae@icloud.edu",
     },
     {
         id: "13",
@@ -140,6 +146,9 @@ const items: Items = [
         price: "35 000€",
         subname: "L'explorateur des profondeurs",
         image: "/tagheuer/grandcarrera.jpg",
+        cname: "Kenyon Huff",
+        cphone: "07 45 37 11 01",
+        cemail: "ante@google.org",
     },
     {
         id: "14",
@@ -148,6 +157,9 @@ const items: Items = [
         price: "35 000€",
         subname: "L'explorateur des profondeurs",
         image: "/tagheuer/formula1.jpg",
+        cname: "Porter Flores",
+        cphone: "03 46 76 16 67",
+        cemail: "nisi@hotmail.couk",
     },
     {
         id: "15",
@@ -156,6 +168,9 @@ const items: Items = [
         price: "35 000€",
         subname: "L'explorateur des profondeurs",
         image: "/tagheuer/link.jpg",
+        cname: "Regina Herring",
+        cphone: "04 28 25 33 16",
+        cemail: "consectetuer@hotmail.com",
     },
     {
         id: "16",
@@ -164,6 +179,9 @@ const items: Items = [
         price: "35 000€",
         subname: "L'explorateur des profondeurs",
         image: "/tagheuer/aquaracer.jpg",
+        cname: "Marvin Waters",
+        cphone: "05 25 33 53 33",
+        cemail: "sagittis.placerat@outlook.couk",
     },
 ];
 
