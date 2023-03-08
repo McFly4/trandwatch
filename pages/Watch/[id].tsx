@@ -8,13 +8,14 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import PayMethod from "@/components/Payment/PayMethod";
 
 export default function Id() {
+    const [open, setOpen] = useState(false);
+    const [buyNow, setBuyNow] = useState(false);
     const router = useRouter();
     const { id } = router.query;
     const watch = data.find((item) => item.id === id);
-
-    const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -23,6 +24,17 @@ export default function Id() {
     const handleClose = () => {
         setOpen(false);
     };
+
+    const openPayMethod = () => {
+        setBuyNow(true);
+        setTimeout(() => {
+            window.scrollBy({
+                top: 500,
+                behavior: "smooth",
+            });
+        }, 1000);
+    };
+
     return (
         <>
             <div className={styles.video}>
@@ -36,18 +48,48 @@ export default function Id() {
                 </div>
             </div>
 
-            <div className={styles.item}>
-                <div className="item__img">
-                    <img src={watch?.image} alt="" />
+            <>
+                <div className={styles.item}>
+                    <div className="item__img">
+                        <img src={watch?.image} alt="" />
+                    </div>
+                    <div className={styles.item__description}>
+                        <h1>{watch?.name}</h1>
+                        <h4>{watch?.desc1}</h4>
+                        <h3>{watch?.price}</h3>
+
+                        <div className={styles.buttons}>
+                            <Button
+                                variant="contained"
+                                color="success"
+                                onClick={openPayMethod}
+                            >
+                                <p>Acheter maintenant</p>
+                            </Button>
+                            <Button
+                                variant="outlined"
+                                onClick={handleClickOpen}
+                            >
+                                <p>Contactez le vendeur</p>
+                            </Button>
+                        </div>
+                    </div>
                 </div>
-                <div className={styles.item__description}>
-                    <h1>{watch?.name}</h1>
-                    <h3>{watch?.price}</h3>
-                    <Button variant="outlined" onClick={handleClickOpen}>
-                        Contactez le vendeur
-                    </Button>
-                </div>
-            </div>
+
+                {buyNow ? (
+                    <div className={styles.stepper}>
+                        <div className={styles.item__buynow}>
+                            <PayMethod />
+                            <Button
+                                color="error"
+                                onClick={() => setBuyNow(false)}
+                            >
+                                Annuler
+                            </Button>
+                        </div>
+                    </div>
+                ) : null}
+            </>
             <Dialog open={open} onClose={handleClose} fullWidth={true}>
                 <DialogTitle>Informations sur le vendeur :</DialogTitle>
                 <DialogContent>
